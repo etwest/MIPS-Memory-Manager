@@ -6,7 +6,7 @@ and while it should save memory consumption for most programs this does come at 
 
 ## Source Files
 * `MemManagementList.asm` provides the key functionality for managing free/allocated/uinitialized memory
-* `memManager.asm` the source file which should be included when using the memory manager. Implements `alloc` and `free`
+* `MemManager.asm` the source file which should be included when using the memory manager. Implements `alloc` and `free`
 
 ## alloc
 Function to allocate new memory either using syscall 9 (to initialize memory on the heap) or by returning memory that was marked free
