@@ -7,6 +7,7 @@ and while it should save memory consumption for most programs this does come at 
 ## Source Files
 * `MemManagementList.asm` provides the key functionality for managing free/allocated/uinitialized memory
 * `MemManager.asm` the source file which should be included when using the memory manager. Implements `alloc` and `free`
+To use the memory manager the `.asm` files must be copied to the directory that contains your `MARS.jar` file.
 
 ## alloc
 Function to allocate new memory either using syscall 9 (to initialize memory on the heap) or by returning memory that was marked free
@@ -15,7 +16,8 @@ Function to allocate new memory either using syscall 9 (to initialize memory on 
 Function which takes in the address of allocated memory and marks it as free (ready to be used again by a call to alloc)
 
 # Example
-The provided example sorts an array using recursive MergeSort.  Additionally, code to plot the memory impact is provided.
+The provided example sorts an array using recursive MergeSort.  Additionally, code to plot the memory impact is provided.  
+To run the example copy the `.asm` files to the directory with your `MARS.jar` file.
 * `standard_mergesort.asm` provides code to run mergesort using syscall 9 directly (syscall 9 allocates heap memory)
 * `managed_mergesort.asm` provides code to run mergesort using memory managment via calls to `alloc` and `free`
 * `standard_impact.txt` the result of running `standard_mergesort.asm`
