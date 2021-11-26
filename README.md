@@ -5,15 +5,15 @@ The purpose of this code was for my own enjoyment and to learn more about memory
 and while it should save memory consumption for most programs this does come at the cost of additional executed instructions.
 
 ## Source Files
-* `MemManagementList.asm` provides the key functionality for managing free/allocated/uinitialized memory
-* `MemManager.asm` the source file which should be included when using the memory manager. Implements `alloc` and `free`
+* `MemManagementList.asm` provides the key functionality for managing free/allocated/uinitialized memory.
+* `MemManager.asm` the source file which should be included when using the memory manager. Implements `alloc` and `free`.  
 To use the memory manager the `.asm` files must be copied to the directory that contains your `MARS.jar` file.
 
 ## alloc
-Function to allocate new memory either using syscall 9 (to initialize memory on the heap) or by returning memory that was marked free
+Function to allocate new memory either using syscall 9 (to initialize memory on the heap) or by returning memory that was marked free.
 
 ## free
-Function which takes in the address of allocated memory and marks it as free (ready to be used again by a call to alloc)
+Function which takes in the address of allocated memory and marks it as free (ready to be used again by a call to alloc).
 
 # Example
 The provided example sorts an array using recursive MergeSort.  Additionally, code to plot the memory impact is provided.  
